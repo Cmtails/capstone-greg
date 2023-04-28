@@ -20,12 +20,12 @@
 <body>
 <nav>
     <ul class="menu">
-      <li class="logo"><a href="./index.html">W A L M A N</a></li>
-      <li class="item"><a href="./index.html">Home</a></li>
-      <li class="item"><a href="./portfolio.html">Portfolio</a></li>
-      <li class="item"><a href="./about.html">About</a></li>
+      <li class="logo"><a href="/index.html">W A L M A N</a></li>
+      <li class="item"><a href="/index.html">Home</a></li>
+      <li class="item"><a href="portfolio.html">Portfolio</a></li>
+      <li class="item"><a href="about.html">About</a></li>
       <li class="item"><a href="#">Services</a></li>
-      <li class="item"><a href="./contact.html">Contact</a></li>
+      <li class="item"><a href="contact.html">Contact</a></li>
       <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
     </ul>
   </nav>
@@ -46,8 +46,7 @@
         <img src="https://lh3.googleusercontent.com/pw/AJFCJaWHhEdb1eWoJuaTMPQpM6U5viLSqlnS12wGqbLRnNyTkJPlqdTA990ibYwW2r2vww8JF1vRAGNbYmrjZWr_cdq4UB7AIkfUC014Hxu40--U2LV_wOWgogFXFNvlBkqQll6HEwho5H2m__YHQhw1Njw=w1135-h851-s-no?authuser=0" style="width:100%" onclick="onClick(this)" alt="Grassy Park of Circuit Training">
         <img src="https://lh3.googleusercontent.com/pw/AJFCJaXZz5r4X8pyezdYA7wNtqZgt4ob6SRbmoHZRgwYPGVbJHoQDpK2WW0L1wL41QE_QymuxQbzZOzlmzgA8SWtD99Mvr0XtPnVl-4ebBVOg68rf5rbPPFURWKI5kggZ8NvbgaJ1eCT7OWmfICYjiVMR9E=w639-h851-s-no?authuser=0" style="width:100%" onclick="onClick(this)" alt="Down the Steps">
         <img src="https://lh3.googleusercontent.com/pw/AJFCJaXW8FzMafr58Gmz2uq5mO05hkMJE5RDaTxvFoa5qVZpZtoCcRVmNVTmx5zSkQHmy-qk7pJVeQhvknfwiYVttildP2IgfKaa-FP4YxmWoeYujYUqW79lD1OTHzVT0Eu8LKzCx1yfZlb0G2b66UHdEx8=w1135-h851-s-no?authuser=0" style="width:100%" onclick="onClick(this)" alt="The Forest">
-        <img src="https://lh3.googleusercontent.com/pw/AJFCJaW7y4kF7qRpOjzhKO9HUrNhO8qMitmlQSNmZ43L--1E3o1Ga26ZAR3CFRml1ljylPI8qpyQEi9zTzypPhBL34RBS6KnIhLn3oU6gM3WwlIk6HKBGRdLgINcOrJI_XTZewr6Rwmg6zwZGmg7YBUI6AEU=w650-h866-s-no?authuser=0" style="width:100%; height:74.3vh;" onclick="onClick(this)" alt="Tardis">
-    </div>
+      </div>
       
       <div class="grid-col">
         <img src="https://lh3.googleusercontent.com/pw/AJFCJaUrA6zjcrCLAhRaGlMeHZybykI8YisbUaoAdzTTtKY5USTYsO6nShzuvR7yhak0toAlEFQ955hZ_l-hjufx_7xCQxY-yGYKrTo4bSQdqE5OuKp_DkjGsoIedrcCMtfNEvPSZa5gXOVqD2usGg0DqHw=w639-h851-s-no?authuser=0" style="width:100%" onclick="onClick(this)" alt="Dead End">
@@ -65,9 +64,19 @@
         <p id="caption"></p>
       </div>
     </div>
+<!--
+</div>   
+
+  <nav class="pagination-container">
+
+    <div id="pagination-numbers">
+
+    </div>
+  </nav> -->
+
 
 <!--foot-->
-<div class="footer" style="display:inline-block; transform:translate(70%,5%);">
+<div class="footer">
         <section class="ft-social">
             <ul class="ft-social-list">
             
@@ -81,7 +90,8 @@
           </section>
         <p> © 2023 - Designed by Kevin "CMTails" Lee | grazes.gc@gmail.com </p>
     </div>
-  
+    
+    
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -96,6 +106,88 @@
         }
         
         </script>
+
+    <script>
+        $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+            $(this).find("a").html("<i class='fas fa-bars'></i>");
+        } else {
+            $(".item").addClass("active");
+            $(this).find("a").html("<i class='fas fa-times'></i>");
+        }
+    });
+});
+    </script>
+    <!-- Pagination text incompatible with zoom
+<script>
+    //pagination
+    const paginationNumbers = document.getElementById("pagination-numbers");
+const paginatedList = document.getElementById("paginated-list");
+const listItems = paginatedList.querySelectorAll("img");
+
+const paginationLimit = 3;
+const pageCount = Math.ceil(listItems.length / paginationLimit);
+let currentPage = 1;
+
+const appendPageNumber = (index) => {
+  const pageNumber = document.createElement("button");
+  pageNumber.className = "pagination-number";
+  pageNumber.innerHTML = index;
+  pageNumber.setAttribute("page-index", index);
+  pageNumber.setAttribute("aria-label", "Page " + index);
+
+  paginationNumbers.appendChild(pageNumber);
+};
+
+const getPaginationNumbers = () => {
+  for (let i = 1; i <= pageCount; i++) {
+    appendPageNumber(i);
+  }
+};
+
+const handleActivePageNumber = () => {
+  document.querySelectorAll(".pagination-number").forEach((button) => {
+    button.classList.remove("active");
+    const pageIndex = Number(button.getAttribute("page-index"));
+    if (pageIndex == currentPage) {
+      button.classList.add("active");
+    }
+  });
+};
+
+const setCurrentPage = (pageNum) => {
+  currentPage = pageNum;
+  handleActivePageNumber();
+
+  const prevRange = (pageNum - 1) * paginationLimit;
+  const currRange = pageNum * paginationLimit;
+
+  listItems.forEach((item, index) => {
+    item.classList.add("hidden");
+    if (index >= prevRange && index < currRange) {
+      item.classList.remove("hidden");
+    }
+  });
+};
+
+window.addEventListener("load", () => {
+  getPaginationNumbers();
+  setCurrentPage(1);
+
+  document.querySelectorAll(".pagination-number").forEach((button) => {
+    const pageIndex = Number(button.getAttribute("page-index"));
+
+    if (pageIndex) {
+      button.addEventListener("click", () => {
+        setCurrentPage(pageIndex);
+      });
+    }
+  });
+});
+
+</script>-->
 
 </body>
 </html>
