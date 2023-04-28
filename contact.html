@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Walman Deluchi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bbc9e2ef5d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<nav>
+    <ul class="menu">
+      <li class="logo"><a href="/index.html">W A L M A N</a></li>
+      <li class="item"><a href="/index.html">Home</a></li>
+      <li class="item"><a href="portfolio.html">Portfolio</a></li>
+      <li class="item"><a href="about.html">About</a></li>
+      <li class="item"><a href="#">Services</a></li>
+      <li class="item"><a href="contact.html">Contact</a></li>
+      <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+
+<!--main content-->
+<div class="about-main">
+   <div class="about-item">
+    <img src="https://lh3.googleusercontent.com/pw/AJFCJaW7y4kF7qRpOjzhKO9HUrNhO8qMitmlQSNmZ43L--1E3o1Ga26ZAR3CFRml1ljylPI8qpyQEi9zTzypPhBL34RBS6KnIhLn3oU6gM3WwlIk6HKBGRdLgINcOrJI_XTZewr6Rwmg6zwZGmg7YBUI6AEU=w650-h866-s-no?authuser=0">
+</div>
+   <div class="about-item about-text">
+    <h2>Get in Touch</h2>   
+    <p>This is a sentence. Lorem ipsum dolor sit amet, cum no mundi adipiscing dissentias. Quod essent dolorem est ad. Nisl vivendo facilisi sed te. Ne tibique detracto oportere nam, cu mei evertitur definiebas signiferumque.</p>
+    <br>
+    <p>Tel: 917-123-4567  |  Email: Walman.Deluchi0329@gmail.com</p>
+    <br>
+    <div class="container">
+      <form>
+        <ul class="flex-outer">
+          <li>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="Enter your first name here">
+          </li>
+          <li>
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="Enter your last name here">
+          </li>
+          <li>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email here">
+          </li>
+          <li>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Enter your phone here">
+          </li>
+          <li>
+            <label for="message">Message</label>
+            <textarea rows="5" id="message" placeholder="Enter your message here"></textarea>
+          </li>
+          <li>
+            <button type="submit">Submit</button>
+          </li>
+        </ul>
+      </form>
+</div>
+</div>
+ </div>
+    <!--foot-->
+    <div class="footer">
+        <section class="ft-social">
+            <ul class="ft-social-list">
+            
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/deluchi.works/" title="deluchi.works"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="mailto:Walman.Deluchi0329@gmail.com" title="Walman.Deluchi0329@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+              <li><a href="tel:917-123-4567" title="917-123-4567"><i class="fa-solid fa-phone fa-rotate-270"></i></a></li>
+             
+            </ul>
+          </section>
+        <p> © 2023 - Designed by Kevin "CMTails" Lee | grazes.gc@gmail.com </p>
+    </div>
+    
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+    <script>
+        $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+            $(this).find("a").html("<i class='fas fa-bars'></i>");
+        } else {
+            $(".item").addClass("active");
+            $(this).find("a").html("<i class='fas fa-times'></i>");
+        }
+    });
+});
+    </script>
+
+</body>
+</html>

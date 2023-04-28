@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walman Deluchi | Photographer |     Influencer | Freak in the Sheets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bbc9e2ef5d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<nav>
+    <ul class="menu">
+      <li class="logo"><a href="/index.html">W A L M A N</a></li>
+      <li class="item"><a href="/index.html">Home</a></li>
+      <li class="item"><a href="/portfolio.html">Portfolio</a></li>
+      <li class="item"><a href="/about.html">About</a></li>
+      <li class="item"><a href="#">Services</a></li>
+      <li class="item"><a href="contact.html">Contact</a></li>
+      <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+
+<!--main content-->
+<div class="main">
+    <img id="main-pic" src="https://lh3.googleusercontent.com/pw/AJFCJaXGxgKU37vorw0Zcrh_f0hIS2Aq0lIWB1Sc3rPC7-KgcikmL8WwlZM43xvaF-fLL0LtEc49qfRO2QzCBuHC5Jl0qpsup8WP9A741E-fnV_z6v9Tkztncrr4cIxugZaL9ATaK3VbZir7W6tPGTmBen_B=w1155-h866-s-no?authuser=0" alt="sunrisepic" title="">  
+    <div class="on-text">
+        <h1>W. DELUCHI</h1>
+        <hr>
+        <h3 id="wide">PHOTOGRAPHY</h3>
+        <div class="btn">View More</div>
+    </div>
+    </div> 
+
+
+    <!--foot-->
+    <div class="footer">
+        <section class="ft-social">
+            <ul class="ft-social-list">
+            
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/deluchi.works/" title="deluchi.works"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="mailto:Walman.Deluchi0329@gmail.com" title="Walman.Deluchi0329@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+              <li><a href="tel:917-123-4567" title="917-123-4567"><i class="fa-solid fa-phone fa-rotate-270"></i></a></li>
+             
+            </ul>
+          </section>
+        <p> © 2023 - Designed by Kevin "CMTails" Lee | grazes.gc@gmail.com </p>
+    </div>
+    
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+    <script>
+        $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+            $(this).find("a").html("<i class='fas fa-bars'></i>");
+        } else {
+            $(".item").addClass("active");
+            $(this).find("a").html("<i class='fas fa-times'></i>");
+        }
+    });
+});
+    </script>
+
+</body>
+</html>
