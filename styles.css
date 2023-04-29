@@ -196,6 +196,7 @@ hr{
   width: fit-content;
   padding: 8px 30px 8px 30px;
   border: solid rgb(242, 243, 224) 1px;
+  color:rgb(242, 243, 224);
   text-decoration: none;
   left:50%;
   bottom:10%;
