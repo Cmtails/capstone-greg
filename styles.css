@@ -96,6 +96,9 @@ h3,.about-item>p{
 #wide{
   letter-spacing: 0.3em;
 }
+.no-decor{
+  text-decoration: none;
+}
 
 
 /*Tablet Size*/
