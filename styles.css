@@ -83,7 +83,7 @@ li.item > a:hover {
   display: block;
 }
 h1{
-  font-size:2.3em;
+  font-size:1.5em;
   white-space: nowrap;
 }
 h2{
@@ -94,7 +94,7 @@ h3,.about-item>p{
 
 }
 #wide{
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
 }
 .no-decor{
   text-decoration: none;
@@ -105,6 +105,12 @@ h3,.about-item>p{
 @media all and (min-width: 900px) {
   body{
       padding:0 10vh;
+  }
+  h1{
+    font-size:2.3em;
+  }
+  #wide{
+    letter-spacing: 0.5em;
   }
 }
 
@@ -146,20 +152,19 @@ h3,.about-item>p{
   .menu li.button {
     padding-right: 0;
   }
+  h1{
+    font-size:4.3em;
+    white-space: nowrap;
+  }
+  h2{
+    font-size:2em;
+  }
+  h3,.about-item>p{
+    font-size:1.3em;
+  }
 }
-h1{
-  font-size:4.3em;
-  white-space: nowrap;
-}
-h2{
-  font-size:2em;
-}
-h3,.about-item>p{
-  font-size:1.3em;
-}
-#wide{
-  letter-spacing: 0.5em;
-}
+
+
 /*main content*/
 .main{
   position:relative;
@@ -167,6 +172,11 @@ h3,.about-item>p{
 #main-pic{
   max-width: 100%;
   opacity:0.9;
+}
+@media all and (min-width: 1454px) {
+  #main-pic{
+    background-size:cover;
+     }
 }
 .on-text{
   position:absolute;

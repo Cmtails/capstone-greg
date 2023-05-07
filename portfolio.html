@@ -36,7 +36,7 @@
 <!--  <div id="paginated-list" aria-live="polite">  --> 
 <!-- Photo grid -->
     <div class="w3-row">
-      <div class="grid-col">
+      <div class="grid-col" style="overflow:hidden;">
         <img src="https://lh3.googleusercontent.com/pw/AJFCJaVe69SGni0EupeAFt0eseO1YVYrbNwurmJFH3Ut8CkxKYB_kpBYfMOcCww7ukDq4EMJweQu0ijjm0V-z2Keo0AJ0y7AlifLUkQm80BIqrdkrKXFXZ45eAf-DIC5XahQxY0O39HF_n-QtTLMAjkRzTDD=w639-h851-s-no?authuser=0" style="width:100%" onclick="onClick(this)" alt="Sakura Blossoms">
         <img src="https://lh3.googleusercontent.com/pw/AJFCJaXGKIHj3FWVVozyuuxNO5uQDqmSWIy3AbaGwyWCDoWSNfrUPebPe_aORhrlrjj21l7H6wtrY7vhk_Uo4n165Reqbing9f8LlgwUi5dtIfHsNnYUF4XyeM-dQGeL0lbNLDlEyVD-RY2Djp3Q7eU86Zw=w639-h851-s-no?authuser=0" style="width:100%" onclick="onClick(this)" alt="Flowers Magenta">
         <img src="https://lh3.googleusercontent.com/pw/AJFCJaW5-pE5LzI1gEEbFpcZwt93CxuCvx5RnWDfQAsaSutkowAw5tqnk7ZoPO0m-TdpLqwRSjIRBJXCCtk2yRtfQZOfXVKNKw3oWDinoBU4U9Mlsv2r07KJFXMAEbRjARcDuLVDy4ZRU7AZ1im4pG4OmDg=w639-h851-s-no?authuser=0" style="width:100%" onclick="onClick(this)" alt="Perishing Leaf">
@@ -46,7 +46,7 @@
         <img src="https://lh3.googleusercontent.com/pw/AJFCJaWHhEdb1eWoJuaTMPQpM6U5viLSqlnS12wGqbLRnNyTkJPlqdTA990ibYwW2r2vww8JF1vRAGNbYmrjZWr_cdq4UB7AIkfUC014Hxu40--U2LV_wOWgogFXFNvlBkqQll6HEwho5H2m__YHQhw1Njw=w1135-h851-s-no?authuser=0" style="width:100%" onclick="onClick(this)" alt="Grassy Park of Circuit Training">
         <img src="https://lh3.googleusercontent.com/pw/AJFCJaXZz5r4X8pyezdYA7wNtqZgt4ob6SRbmoHZRgwYPGVbJHoQDpK2WW0L1wL41QE_QymuxQbzZOzlmzgA8SWtD99Mvr0XtPnVl-4ebBVOg68rf5rbPPFURWKI5kggZ8NvbgaJ1eCT7OWmfICYjiVMR9E=w639-h851-s-no?authuser=0" style="width:100%" onclick="onClick(this)" alt="Down the Steps">
         <img src="https://lh3.googleusercontent.com/pw/AJFCJaXW8FzMafr58Gmz2uq5mO05hkMJE5RDaTxvFoa5qVZpZtoCcRVmNVTmx5zSkQHmy-qk7pJVeQhvknfwiYVttildP2IgfKaa-FP4YxmWoeYujYUqW79lD1OTHzVT0Eu8LKzCx1yfZlb0G2b66UHdEx8=w1135-h851-s-no?authuser=0" style="width:100%" onclick="onClick(this)" alt="The Forest">
-        <img src="https://lh3.googleusercontent.com/pw/AJFCJaW7y4kF7qRpOjzhKO9HUrNhO8qMitmlQSNmZ43L--1E3o1Ga26ZAR3CFRml1ljylPI8qpyQEi9zTzypPhBL34RBS6KnIhLn3oU6gM3WwlIk6HKBGRdLgINcOrJI_XTZewr6Rwmg6zwZGmg7YBUI6AEU=w650-h866-s-no?authuser=0" style="width:100%; height:74.3vh;" onclick="onClick(this)" alt="Tardis">
+        <img src="https://lh3.googleusercontent.com/pw/AJFCJaW7y4kF7qRpOjzhKO9HUrNhO8qMitmlQSNmZ43L--1E3o1Ga26ZAR3CFRml1ljylPI8qpyQEi9zTzypPhBL34RBS6KnIhLn3oU6gM3WwlIk6HKBGRdLgINcOrJI_XTZewr6Rwmg6zwZGmg7YBUI6AEU=w650-h866-s-no?authuser=0" style="width:100%; object-position: center top;" onclick="onClick(this)" alt="Tardis">
     </div>
       
       <div class="grid-col">
@@ -96,6 +96,21 @@
         }
         
         </script>
+
+<script>
+  //footer js
+  $(function() {
+$(".toggle").on("click", function() {
+  if ($(".item").hasClass("active")) {
+      $(".item").removeClass("active");
+      $(this).find("a").html("<i class='fas fa-bars'></i>");
+  } else {
+      $(".item").addClass("active");
+      $(this).find("a").html("<i class='fas fa-times'></i>");
+  }
+});
+});
+</script>
 
 </body>
 </html>
