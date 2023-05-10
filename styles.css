@@ -32,6 +32,9 @@ margin: 0;
   text-decoration:none; 
   color:inherit;
 }
+.fas, .toggle{
+  color:rgb(1, 1, 17);
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -228,6 +231,9 @@ hr{
 .header-mid{
 text-align: center;
 padding:2.5vh 0vh 6vh 0vh;
+}
+.grid-col{
+  overflow:hidden;
 }
 .grid-col img{
     margin-bottom: -6px; 
@@ -430,4 +436,7 @@ FOOTER
 .ft-social-list li {
   margin: 0.5rem;
   font-size: 1.25rem;
+}
+.fab,.fa-solid{
+  color:rgb(1, 1, 17);
 }
